@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://github.com/Conchylicultor/DeepQA -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+  <link rel="dns-prefetch" href="https://assets-cdn.github.com/">
+  <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com/">
+  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+
+
+
+  <link crossorigin="anonymous" href="./Conchylicultor_DeepQA_ My tensorflow implementation of _A neural conversational model_, a Deep learning based chatbot_files/frameworks-d7137690e30123bade38abb082ac79f36cc7a105ff92e602405f53b725465cab.css" media="all" rel="stylesheet">
+  <link crossorigin="anonymous" href="./Conchylicultor_DeepQA_ My tensorflow implementation of _A neural conversational model_, a Deep learning based chatbot_files/github-6e26e8bc5c2f8ac0156b9e397bdcf02b2b878c18ecea15ac9b5a7657f151ed8d.css" media="all" rel="stylesheet">
+  
+  
+  
+  
+
+  <meta name="viewport" content="width=device-width">
+  
+  <title>Conchylicultor/DeepQA: My tensorflow implementation of "A neural conversational model", a Deep learning based chatbot</title>
+  <link rel="search" type="application/opensearchdescription+xml" href="https://github.com/opensearch.xml" title="GitHub">
+  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+  <meta property="fb:app_id" content="1401488693436528">
+
+    
+    <meta content="https://avatars3.githubusercontent.com/u/9047355?s=400&amp;v=4" property="og:image"><meta content="GitHub" property="og:site_name"><meta content="object" property="og:type"><meta content="Conchylicultor/DeepQA" property="og:title"><meta content="https://github.com/Conchylicultor/DeepQA" property="og:url"><meta content="DeepQA - My tensorflow implementation of &quot;A neural conversational model&quot;, a Deep learning based chatbot" property="og:description">
+
+  <link rel="assets" href="https://assets-cdn.github.com/">
+  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MjEyNzQzODkyOmVjM2EyZTJiMzUzMWU3NjMyNTQzNjUxMzFlYmU3ZjM0ZDc2Yzg5MDliY2ZiNTM4M2VmN2Y5NWIwZWI5NWNjZDk=--d2fe21e6685ecbba86517c06f8f5b9467f653e5c">
+  <meta name="pjax-timeout" content="1000">
+  <link rel="sudo-modal" href="https://github.com/sessions/sudo_modal">
+  <meta name="request-id" content="DB1C:0C0C:AF046E:11F2687:59EFAE5D" data-pjax-transient="">
+  
+
+  <meta name="selected-link" value="repo_source" data-pjax-transient="">
+
+  <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+<meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-analytics" content="UA-3769691-2">
+
+<meta content="collector.githubapp.com" name="octolytics-host"><meta content="github" name="octolytics-app-id"><meta content="https://collector.githubapp.com/github-external/browser_event" name="octolytics-event-url"><meta content="DB1C:0C0C:AF046E:11F2687:59EFAE5D" name="octolytics-dimension-request_id"><meta content="iad" name="octolytics-dimension-region_edge"><meta content="iad" name="octolytics-dimension-region_render"><meta content="15340590" name="octolytics-actor-id"><meta content="snknitin" name="octolytics-actor-login"><meta content="a54796b5e96cc7f553018022044c6b74bd3387e16fedb9a89f979e7197f7da8a" name="octolytics-actor-hash">
+<meta content="/&lt;user-name&gt;/&lt;repo-name&gt;" data-pjax-transient="true" name="analytics-location">
+
+
+
+
+  <meta class="js-ga-set" name="dimension1" content="Logged In">
+
+
+  
+
+      <meta name="hostname" content="github.com">
+  <meta name="user-login" content="snknitin">
+
+      <meta name="expected-hostname" content="github.com">
+    <meta name="js-proxy-site-detection-payload" content="ZGE3MmFhNmJkZGYxZjNmMmQwZTM0YmFiMWE1Mzk3Y2NkZWM0ZGYzZjY0YWFjMDI2OWRjNzRiODgyYTQ0Y2YzNXx7InJlbW90ZV9hZGRyZXNzIjoiMTc0LjYyLjIxOS4xNTUiLCJyZXF1ZXN0X2lkIjoiREIxQzowQzBDOkFGMDQ2RToxMUYyNjg3OjU5RUZBRTVEIiwidGltZXN0YW1wIjoxNTA4ODc5OTY1LCJob3N0IjoiZ2l0aHViLmNvbSJ9">
+
+    <meta name="enabled-features" content="REMOTE_NEXT,UNIVERSE_BANNER">
+
+  <meta name="html-safe-nonce" content="7f9a8c8db3b8d4af8adc1898691c836732c5aac0">
+
+  <meta http-equiv="x-pjax-version" content="a0bcf5f0e23b49bd85d1f242993d22d2">
+  
+
+      <link href="https://github.com/Conchylicultor/DeepQA/commits/master.atom" rel="alternate" title="Recent Commits to DeepQA:master" type="application/atom+xml">
+
+  <meta name="description" content="DeepQA - My tensorflow implementation of &quot;A neural conversational model&quot;, a Deep learning based chatbot">
+  <meta name="go-import" content="github.com/Conchylicultor/DeepQA git https://github.com/Conchylicultor/DeepQA.git">
+
+  <meta content="9047355" name="octolytics-dimension-user_id"><meta content="Conchylicultor" name="octolytics-dimension-user_login"><meta content="62824998" name="octolytics-dimension-repository_id"><meta content="Conchylicultor/DeepQA" name="octolytics-dimension-repository_nwo"><meta content="true" name="octolytics-dimension-repository_public"><meta content="false" name="octolytics-dimension-repository_is_fork"><meta content="62824998" name="octolytics-dimension-repository_network_root_id"><meta content="Conchylicultor/DeepQA" name="octolytics-dimension-repository_network_root_nwo"><meta content="false" name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown">
+
+
+    <link rel="canonical" href="https://github.com/Conchylicultor/DeepQA" data-pjax-transient="">
+
+
+  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+
+  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+
+  <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+  <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico">
+
+<meta name="theme-color" content="#1e2327">
+
+
+
+  </head>
+
+  <body class="logged-in env-production">
+    
+
+  <div class="position-relative js-header-wrapper ">
+    <a href="https://github.com/Conchylicultor/DeepQA#start-of-content" tabindex="1" class="bg-black text-white p-3 show-on-focus js-skip-to-content">Skip to content</a>
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
+
+    
+    
+    
+
+
+
+        
+<header class="Header  f5" role="banner">
+  <div class="d-flex px-3 flex-justify-between container-lg">
+    <div class="d-flex flex-justify-between">
+      <a class="header-logo-invertocat" href="https://github.com/" data-hotkey="g d" aria-label="Homepage" data-ga-click="Header, go to dashboard, icon:logo">
+  <svg aria-hidden="true" class="octicon octicon-mark-github" height="32" version="1.1" viewBox="0 0 16 16" width="32"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+</a>
+
+
+    </div>
+
+    <div class="HeaderMenu d-flex flex-justify-between flex-auto">
+      <div class="d-flex">
+            <div class="">
+              <div class="header-search scoped-search site-scoped-search js-site-search" role="search">
+  <!-- '"` --><!-- </textarea></xmp> --><form accept-charset="UTF-8" action="https://github.com/Conchylicultor/DeepQA/search" class="js-site-search-form" data-scoped-search-url="/Conchylicultor/DeepQA/search" data-unscoped-search-url="/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+    <label class="form-control header-search-wrapper js-chromeless-input-container">
+        <a href="https://github.com/Conchylicultor/DeepQA" class="header-search-scope no-underline">This repository</a>
+      <input type="text" class="form-control header-search-input js-site-search-focus js-site-search-field is-clearable" data-hotkey="s" name="q" value="" placeholder="Search" aria-label="Search this repository" data-unscoped-placeholder="Search GitHub" data-scoped-placeholder="Search" autocapitalize="off">
+        <input type="hidden" class="js-site-search-type-field" name="type">
+    </label>
+</form></div>
+
+            </div>
+
+          <ul class="d-flex pl-2 flex-items-center text-bold list-style-none" role="navigation">
+            <li>
+              <a href="https://github.com/pulls" aria-label="Pull requests you created" class="js-selected-navigation-item HeaderNavlink px-2" data-ga-click="Header, click, Nav menu - item:pulls context:user" data-hotkey="g p" data-selected-links="/pulls /pulls/assigned /pulls/mentioned /pulls">
+                Pull requests
+</a>            </li>
+            <li>
+              <a href="https://github.com/issues" aria-label="Issues you created" class="js-selected-navigation-item HeaderNavlink px-2" data-ga-click="Header, click, Nav menu - item:issues context:user" data-hotkey="g i" data-selected-links="/issues /issues/assigned /issues/mentioned /issues">
+                Issues
+</a>            </li>
+                <li>
+                  <a href="https://github.com/marketplace" class="js-selected-navigation-item HeaderNavlink px-2" data-ga-click="Header, click, Nav menu - item:marketplace context:user" data-selected-links=" /marketplace">
+                    Marketplace
+</a>                </li>
+            <li>
+              <a href="https://github.com/explore" class="js-selected-navigation-item HeaderNavlink px-2" data-ga-click="Header, click, Nav menu - item:explore" data-selected-links="/explore /trending /trending/developers /integrations /integrations/feature/code /integrations/feature/collaborate /integrations/feature/ship showcases showcases_search showcases_landing /explore">
+                Explore
+</a>            </li>
+          </ul>
+      </div>
+
+      <div class="d-flex">
+        
+<ul class="user-nav d-flex flex-items-center list-style-none" id="user-links">
+  <li class="dropdown js-menu-container js-header-notifications">
+    <span class="d-inline-block  px-2">
+      
+      <a href="https://github.com/notifications" aria-label="You have no unread notifications" class="notification-indicator tooltipped tooltipped-s  js-socket-channel js-notification-indicator" data-channel="notification-changed:15340590" data-ga-click="Header, go to notifications, icon:read" data-hotkey="g n">
+          <span class="mail-status "></span>
+          <svg aria-hidden="true" class="octicon octicon-bell" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 12v1H0v-1l.73-.58c.77-.77.81-2.55 1.19-4.42C2.69 3.23 6 2 6 2c0-.55.45-1 1-1s1 .45 1 1c0 0 3.39 1.23 4.16 5 .38 1.88.42 3.66 1.19 4.42l.66.58H14zm-7 4c1.11 0 2-.89 2-2H5c0 1.11.89 2 2 2z"></path></svg>
+</a>
+    </span>
+  </li>
+
+  <li class="dropdown js-menu-container">
+    <details class="dropdown-details js-dropdown-details d-flex px-2 flex-items-center">
+      <summary class="HeaderNavlink" aria-label="Create new…" data-ga-click="Header, create new, icon:add">
+        <svg aria-hidden="true" class="octicon octicon-plus float-left mr-1 mt-1" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5z"></path></svg>
+        <span class="dropdown-caret mt-1"></span>
+      </summary>
+
+      <ul class="dropdown-menu dropdown-menu-sw">
+        
+<a class="dropdown-item" href="https://github.com/new" data-ga-click="Header, create new repository">
+  New repository
+</a>
+
+  <a class="dropdown-item" href="https://github.com/new/import" data-ga-click="Header, import a repository">
+    Import repository
+  </a>
+
+<a class="dropdown-item" href="https://gist.github.com/" data-ga-click="Header, create new gist">
+  New gist
+</a>
+
+  <a class="dropdown-item" href="https://github.com/organizations/new" data-ga-click="Header, create new organization">
+    New organization
+  </a>
+
+
+
+  <div class="dropdown-divider"></div>
+  <div class="dropdown-header">
+    <span title="Conchylicultor/DeepQA">This repository</span>
+  </div>
+    <a class="dropdown-item" href="https://github.com/Conchylicultor/DeepQA/issues/new" data-ga-click="Header, create new issue">
+      New issue
+    </a>
+
+      </ul>
+    </details>
+  </li>
+
+  <li class="dropdown js-menu-container">
+
+    <details class="dropdown-details js-dropdown-details d-flex pl-2 flex-items-center">
+      <summary class="HeaderNavlink name mt-1" aria-label="View profile and more" data-ga-click="Header, show menu, icon:avatar">
+        <img alt="@snknitin" class="avatar float-left mr-1" src="./Conchylicultor_DeepQA_ My tensorflow implementation of _A neural conversational model_, a Deep learning based chatbot_files/15340590" height="20" width="20">
+        <span class="dropdown-caret"></span>
+      </summary>
+
+      <ul class="dropdown-menu dropdown-menu-sw">
+        <li class="dropdown-header header-nav-current-user css-truncate">
+          Signed in as <strong class="css-truncate-target">snknitin</strong>
+        </li>
+
+        <li class="dropdown-divider"></li>
+
+        <li><a class="dropdown-item" href="https://github.com/snknitin" data-ga-click="Header, go to profile, text:your profile">
+          Your profile
+        </a></li>
+        <li><a class="dropdown-item" href="https://github.com/snknitin?tab=stars" data-ga-click="Header, go to starred repos, text:your stars">
+          Your stars
+        </a></li>
+          <li><a class="dropdown-item" href="https://gist.github.com/" data-ga-click="Header, your gists, text:your gists">Your Gists</a></li>
+
+        <li class="dropdown-divider"></li>
+
+        <li><a class="dropdown-item" href="https://help.github.com/" data-ga-click="Header, go to help, text:help">
+          Help
+        </a></li>
+
+        <li><a class="dropdown-item" href="https://github.com/settings/profile" data-ga-click="Header, go to settings, icon:settings">
+          Settings
+        </a></li>
+
+        <li><!-- '"` --><!-- </textarea></xmp> --><form accept-charset="UTF-8" action="https://github.com/logout" class="logout-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="caO0ckT8ualxkdQOgYv34pHddhOi9LdmrHGgHMM/tisJwq1s/Sh+2tBeYAe++cD5R0pIhJjm7ukuY5rpwEQSBg=="></div>
+          <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
+            Sign out
+          </button>
+        </form></li>
+      </ul>
+    </details>
+  </li>
+</ul>
+
+
+        <!-- '"` --><!-- </textarea></xmp> --><form accept-charset="UTF-8" action="https://github.com/logout" class="sr-only right-0" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="iENpOiOnHlTFlXAV9qlJ6J2xSzHvLgC0Eg5305O+gB3wInAkmnPZJ2RaxBzJ237zSyZ1ptU8WTuQHE0mkMUkMA=="></div>
+          <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
+            Sign out
+          </button>
+</form>      </div>
+    </div>
+  </div>
+</header>
+
+
+      
+
+  </div>
+
+  <div id="start-of-content" class="show-on-focus"></div>
+
+    <div id="js-flash-container">
+</div>
+
+
+
+  <div role="main">
+        <div itemscope="" itemtype="http://schema.org/SoftwareSourceCode">
+    <div id="js-repo-pjax-container" data-pjax-container="">
+      
+
+
+
+
+    <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav ">
+      <div class="repohead-details-container clearfix container ">
+
+        <ul class="pagehead-actions">
+  <li>
+        <!-- '"` --><!-- </textarea></xmp> --><form accept-charset="UTF-8" action="https://github.com/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="rAvr+FOEI2Y/Lk4HLeOa5hECKKyESayL57P2np5Cqpatb93YbmL9FSiw8XxNmHPGsBNYa9R4i7rMibFuvlWs/Q=="></div>      <input class="form-control" id="repository_id" name="repository_id" type="hidden" value="62824998">
+
+        <div class="select-menu js-menu-container js-select-menu">
+          <a href="https://github.com/Conchylicultor/DeepQA/subscription" class="btn btn-sm btn-with-count select-menu-button js-menu-target" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Toggle repository notifications menu" data-ga-click="Repository, click Watch settings, action:files#disambiguate">
+            <span class="js-select-button">
+                <svg aria-hidden="true" class="octicon octicon-eye" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg>
+                Watch
+            </span>
+          </a>
+            <a class="social-count js-social-count" href="https://github.com/Conchylicultor/DeepQA/watchers" aria-label="115 users are watching this repository">
+              115
+            </a>
+
+        <div class="select-menu-modal-holder">
+          <div class="select-menu-modal subscription-menu-modal js-menu-content">
+            <div class="select-menu-header js-navigation-enable" tabindex="-1">
+              <svg aria-label="Close" class="octicon octicon-x js-menu-close" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"></path></svg>
+              <span class="select-menu-title">Notifications</span>
+            </div>
+
+              <div class="select-menu-list js-navigation-container" role="menu">
+
+                <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+                  <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+                  <div class="select-menu-item-text">
+                    <input checked="checked" id="do_included" name="do" type="radio" value="included">
+                    <span class="select-menu-item-heading">Not watching</span>
+                    <span class="description">Be notified when participating or @mentioned.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg aria-hidden="true" class="octicon octicon-eye" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg>
+                      Watch
+                    </span>
+                  </div>
+                </div>
+
+                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                  <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+                  <div class="select-menu-item-text">
+                    <input id="do_subscribed" name="do" type="radio" value="subscribed">
+                    <span class="select-menu-item-heading">Watching</span>
+                    <span class="description">Be notified of all conversations.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg aria-hidden="true" class="octicon octicon-eye" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg>
+                        Unwatch
+                    </span>
+                  </div>
+                </div>
+
+                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                  <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+                  <div class="select-menu-item-text">
+                    <input id="do_ignore" name="do" type="radio" value="ignore">
+                    <span class="select-menu-item-heading">Ignoring</span>
+                    <span class="description">Never be notified.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg aria-hidden="true" class="octicon octicon-mute" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8 2.81v10.38c0 .67-.81 1-1.28.53L3 10H1c-.55 0-1-.45-1-1V7c0-.55.45-1 1-1h2l3.72-3.72C7.19 1.81 8 2.14 8 2.81zm7.53 3.22l-1.06-1.06-1.97 1.97-1.97-1.97-1.06 1.06L11.44 8 9.47 9.97l1.06 1.06 1.97-1.97 1.97 1.97 1.06-1.06L13.56 8l1.97-1.97z"></path></svg>
+                        Stop ignoring
+                    </span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+</form>
+  </li>
+
+  <li>
+    
+  <div class="js-toggler-container js-social-container starring-container ">
+    <!-- '"` --><!-- </textarea></xmp> --><form accept-charset="UTF-8" action="https://github.com/Conchylicultor/DeepQA/unstar" class="starred js-social-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="L6JeUSELrH/TZQi2RQ1d7fGv3xDjmYM+5NlIZh4pRcwlTQ9FncWV6O7F3abNnTJXkn20Yp/5zb402aW6+7d5Vw=="></div>
+      <input type="hidden" name="context" value="repository">
+      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Unstar Conchylicultor/DeepQA" data-ga-click="Repository, click unstar button, action:files#disambiguate; text:Unstar">
+        <svg aria-hidden="true" class="octicon octicon-star" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"></path></svg>
+        Unstar
+      </button>
+        <a class="social-count js-social-count" href="https://github.com/Conchylicultor/DeepQA/stargazers" aria-label="1193 users starred this repository">
+          1,193
+        </a>
+</form>
+    <!-- '"` --><!-- </textarea></xmp> --><form accept-charset="UTF-8" action="https://github.com/Conchylicultor/DeepQA/star" class="unstarred js-social-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="2fh45u6DNvVPr7Q8SXHun18PT8aNittFT04x8f3GwH9BctsVsz2AluxaBB7l0DfAeO3og+d6eY4Zw7452bsAhQ=="></div>
+      <input type="hidden" name="context" value="repository">
+      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Star this repository" title="Star Conchylicultor/DeepQA" data-ga-click="Repository, click star button, action:files#disambiguate; text:Star">
+        <svg aria-hidden="true" class="octicon octicon-star" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"></path></svg>
+        Star
+      </button>
+        <a class="social-count js-social-count" href="https://github.com/Conchylicultor/DeepQA/stargazers" aria-label="1193 users starred this repository">
+          1,193
+        </a>
+</form>  </div>
+
+  </li>
+
+  <li>
+          <a href="https://github.com/Conchylicultor/DeepQA#fork-destination-box" class="btn btn-sm btn-with-count" title="Fork your own copy of Conchylicultor/DeepQA to your account" aria-label="Fork your own copy of Conchylicultor/DeepQA to your account" rel="facebox" data-ga-click="Repository, show fork modal, action:files#disambiguate; text:Fork" data-vivaldi-spatnav-clickable="1">
+              <svg aria-hidden="true" class="octicon octicon-repo-forked" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+            Fork
+          </a>
+
+          <div id="fork-destination-box" style="display: none;">
+            <h2 class="facebox-header" data-facebox-id="facebox-header">Where should we fork this repository?</h2>
+            <include-fragment src="" class="js-fork-select-fragment fork-select-fragment" data-url="/Conchylicultor/DeepQA/fork?fragment=1">
+              <img alt="Loading" height="64" src="./Conchylicultor_DeepQA_ My tensorflow implementation of _A neural conversational model_, a Deep learning based chatbot_files/octocat-spinner-128.gif" width="64">
+            </include-fragment>
+          </div>
+
+    <a href="https://github.com/Conchylicultor/DeepQA/network" class="social-count" aria-label="575 users forked this repository">
+      575
+    </a>
+  </li>
+</ul>
+
+        <h1 class="public ">
+  <svg aria-hidden="true" class="octicon octicon-repo" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>
+  <span class="author" itemprop="author"><a href="https://github.com/Conchylicultor" class="url fn" rel="author">Conchylicultor</a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong itemprop="name"><a href="https://github.com/Conchylicultor/DeepQA" data-pjax="#js-repo-pjax-container">DeepQA</a></strong>
+
+</h1>
+
+      </div>
+      
+<nav class="reponav js-repo-nav js-sidenav-container-pjax container" itemscope="" itemtype="http://schema.org/BreadcrumbList" role="navigation" data-pjax="#js-repo-pjax-container">
+
+  <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="https://github.com/Conchylicultor/DeepQA" class="js-selected-navigation-item selected reponav-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages /Conchylicultor/DeepQA" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-code" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"></path></svg>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+    <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a href="https://github.com/Conchylicultor/DeepQA/issues" class="js-selected-navigation-item reponav-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /Conchylicultor/DeepQA/issues" itemprop="url">
+        <svg aria-hidden="true" class="octicon octicon-issue-opened" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg>
+        <span itemprop="name">Issues</span>
+        <span class="Counter">49</span>
+        <meta itemprop="position" content="2">
+</a>    </span>
+
+  <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="https://github.com/Conchylicultor/DeepQA/pulls" class="js-selected-navigation-item reponav-item" data-hotkey="g p" data-selected-links="repo_pulls /Conchylicultor/DeepQA/pulls" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-git-pull-request" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+      <span itemprop="name">Pull requests</span>
+      <span class="Counter">2</span>
+      <meta itemprop="position" content="3">
+</a>  </span>
+
+    <a href="https://github.com/Conchylicultor/DeepQA/projects" class="js-selected-navigation-item reponav-item" data-hotkey="g b" data-selected-links="repo_projects new_repo_project repo_project /Conchylicultor/DeepQA/projects">
+      <svg aria-hidden="true" class="octicon octicon-project" height="16" version="1.1" viewBox="0 0 15 16" width="15"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"></path></svg>
+      Projects
+      <span class="Counter">0</span>
+</a>
+    <a href="https://github.com/Conchylicultor/DeepQA/wiki" class="js-selected-navigation-item reponav-item" data-hotkey="g w" data-selected-links="repo_wiki /Conchylicultor/DeepQA/wiki">
+      <svg aria-hidden="true" class="octicon octicon-book" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z"></path></svg>
+      Wiki
+</a>
+
+  <a href="https://github.com/Conchylicultor/DeepQA/pulse" class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors dependency_graph pulse /Conchylicultor/DeepQA/pulse">
+    <svg aria-hidden="true" class="octicon octicon-graph" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"></path></svg>
+    Insights
+</a>
+
+</nav>
+
+
+    </div>
+
+<div class="container new-discussion-timeline experiment-repo-nav">
+  <div class="repository-content">
+
+    
+  
+
+  <div class="js-repo-meta-container">
+  <div class="repository-meta mb-0  js-repo-meta-edit js-details-container ">
+    <div class="repository-meta-content col-11 mb-1">
+          <span class="col-11 text-gray-dark mr-2" itemprop="about">
+            My tensorflow implementation of "A neural conversational model", a Deep learning based chatbot
+          </span>
+    </div>
+
+  </div>
+
+    <div class="mb-3 repository-topics-container js-repository-topics-container js-details-container">
+      <div id="topics-list-container" data-url="/Conchylicultor/DeepQA/settings/topics">
+          <div class="list-topics-container f6 mt-1">
+      <a href="https://github.com/topics/chatbot" class="topic-tag topic-tag-link" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:chatbot">
+        chatbot
+      </a>
+      <a href="https://github.com/topics/deep-learning" class="topic-tag topic-tag-link" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:deep-learning">
+        deep-learning
+      </a>
+      <a href="https://github.com/topics/tensorflow" class="topic-tag topic-tag-link" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:tensorflow">
+        tensorflow
+      </a>
+      <a href="https://github.com/topics/seq2seq" class="topic-tag topic-tag-link" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:seq2seq">
+        seq2seq
+      </a>
+  </div>
+
+
+      </div>
+
+    </div>
+</div>
+
+
+
+  <div class="overall-summary overall-summary-bottomless">
+    <div class="stats-switcher-viewport js-stats-switcher-viewport">
+      <div class="stats-switcher-wrapper">
+      <ul class="numbers-summary">
+        <li class="commits">
+          <a data-pjax="" href="https://github.com/Conchylicultor/DeepQA/commits/master">
+              <svg aria-hidden="true" class="octicon octicon-history" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M8 13H6V6h5v2H8v5zM7 1C4.81 1 2.87 2.02 1.59 3.59L0 2v4h4L2.5 4.5C3.55 3.17 5.17 2.3 7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-.34.03-.67.09-1H.08C.03 7.33 0 7.66 0 8c0 3.86 3.14 7 7 7s7-3.14 7-7-3.14-7-7-7z"></path></svg>
+              <span class="num text-emphasized">
+                181
+              </span>
+              commits
+          </a>
+        </li>
+        <li>
+          <a data-pjax="" href="https://github.com/Conchylicultor/DeepQA/branches">
+            <svg aria-hidden="true" class="octicon octicon-git-branch" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+            <span class="num text-emphasized">
+              1
+            </span>
+            branch
+          </a>
+        </li>
+
+        <li>
+          <a href="https://github.com/Conchylicultor/DeepQA/releases">
+            <svg aria-hidden="true" class="octicon octicon-tag" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M7.73 1.73C7.26 1.26 6.62 1 5.96 1H3.5C2.13 1 1 2.13 1 3.5v2.47c0 .66.27 1.3.73 1.77l6.06 6.06c.39.39 1.02.39 1.41 0l4.59-4.59a.996.996 0 0 0 0-1.41L7.73 1.73zM2.38 7.09c-.31-.3-.47-.7-.47-1.13V3.5c0-.88.72-1.59 1.59-1.59h2.47c.42 0 .83.16 1.13.47l6.14 6.13-4.73 4.73-6.13-6.15zM3.01 3h2v2H3V3h.01z"></path></svg>
+            <span class="num text-emphasized">
+              0
+            </span>
+            releases
+          </a>
+        </li>
+
+        <li>
+            <a href="https://github.com/Conchylicultor/DeepQA/graphs/contributors">
+  <svg aria-hidden="true" class="octicon octicon-organization" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M16 12.999c0 .439-.45 1-1 1H7.995c-.539 0-.994-.447-.995-.999H1c-.54 0-1-.561-1-1 0-2.634 3-4 3-4s.229-.409 0-1c-.841-.621-1.058-.59-1-3 .058-2.419 1.367-3 2.5-3s2.442.58 2.5 3c.058 2.41-.159 2.379-1 3-.229.59 0 1 0 1s1.549.711 2.42 2.088C9.196 9.369 10 8.999 10 8.999s.229-.409 0-1c-.841-.62-1.058-.59-1-3 .058-2.419 1.367-3 2.5-3s2.437.581 2.495 3c.059 2.41-.158 2.38-1 3-.229.59 0 1 0 1s3.005 1.366 3.005 4"></path></svg>
+    <span class="num text-emphasized">
+      12
+    </span>
+    contributors
+</a>
+
+        </li>
+          <li>
+            <a href="https://github.com/Conchylicultor/DeepQA/blob/master/LICENSE">
+              <svg aria-hidden="true" class="octicon octicon-law" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M7 4c-.83 0-1.5-.67-1.5-1.5S6.17 1 7 1s1.5.67 1.5 1.5S7.83 4 7 4zm7 6c0 1.11-.89 2-2 2h-1c-1.11 0-2-.89-2-2l2-4h-1c-.55 0-1-.45-1-1H8v8c.42 0 1 .45 1 1h1c.42 0 1 .45 1 1H3c0-.55.58-1 1-1h1c0-.55.58-1 1-1h.03L6 5H5c0 .55-.45 1-1 1H3l2 4c0 1.11-.89 2-2 2H2c-1.11 0-2-.89-2-2l2-4H1V5h3c0-.55.45-1 1-1h4c.55 0 1 .45 1 1h3v1h-1l2 4zM2.5 7L1 10h3L2.5 7zM13 10l-1.5-3-1.5 3h3z"></path></svg>
+                Apache-2.0
+            </a>
+          </li>
+      </ul>
+
+        <div class="repository-lang-stats">
+          <ol class="repository-lang-stats-numbers">
+            <li>
+                <a href="https://github.com/Conchylicultor/DeepQA/search?l=python" data-ga-click="Repository, language stats search click, location:repo overview">
+                  <span class="color-block language-color" style="background-color:#3572A5;"></span>
+                  <span class="lang">Python</span>
+                  <span class="percent">56.9%</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Conchylicultor/DeepQA/search?l=css" data-ga-click="Repository, language stats search click, location:repo overview">
+                  <span class="color-block language-color" style="background-color:#563d7c;"></span>
+                  <span class="lang">CSS</span>
+                  <span class="percent">32.0%</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Conchylicultor/DeepQA/search?l=javascript" data-ga-click="Repository, language stats search click, location:repo overview">
+                  <span class="color-block language-color" style="background-color:#f1e05a;"></span>
+                  <span class="lang">JavaScript</span>
+                  <span class="percent">8.9%</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Conchylicultor/DeepQA/search?l=html" data-ga-click="Repository, language stats search click, location:repo overview">
+                  <span class="color-block language-color" style="background-color:#e34c26;"></span>
+                  <span class="lang">HTML</span>
+                  <span class="percent">1.8%</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Conchylicultor/DeepQA/search?l=shell" data-ga-click="Repository, language stats search click, location:repo overview">
+                  <span class="color-block language-color" style="background-color:#89e051;"></span>
+                  <span class="lang">Shell</span>
+                  <span class="percent">0.4%</span>
+                </a>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="repository-lang-stats-graph js-toggle-lang-stats" title="Click for language details" data-ga-click="Repository, language bar stats toggle, location:repo overview">
+      <span class="language-color" aria-label="Python 56.9%" style="width:56.9%; background-color:#3572A5;" itemprop="keywords">Python</span>
+      <span class="language-color" aria-label="CSS 32.0%" style="width:32.0%; background-color:#563d7c;" itemprop="keywords">CSS</span>
+      <span class="language-color" aria-label="JavaScript 8.9%" style="width:8.9%; background-color:#f1e05a;" itemprop="keywords">JavaScript</span>
+      <span class="language-color" aria-label="HTML 1.8%" style="width:1.8%; background-color:#e34c26;" itemprop="keywords">HTML</span>
+      <span class="language-color" aria-label="Shell 0.4%" style="width:0.4%; background-color:#89e051;" itemprop="keywords">Shell</span>
+    </div>
+
+
+    
+
+  <div class="file-navigation in-mid-page">
+
+    <details class="get-repo-select-menu js-menu-container float-right position-relative dropdown-details">
+  <summary class="btn btn-sm btn-primary">
+    Clone or download
+    <span class="dropdown-caret"></span>
+  </summary>
+  <div class="position-relative">
+    <div class="get-repo-modal dropdown-menu dropdown-menu-sw pb-0 js-toggler-container ">
+      <div class="clone-options https-clone-options">
+          <!-- '"` --><!-- </textarea></xmp> --><form accept-charset="UTF-8" action="https://github.com/users/set_protocol?protocol_selector=ssh&amp;protocol_type=clone" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="DAJASLK69k4+skK/KOPsvkTMzQP2r/iyrXRuiwb/fqMm4AqW/MpL9PtideYq/5davmbk7OFyHEfDkl2R0410gw=="></div><button class="btn-link btn-change-protocol js-toggler-target float-right" type="submit">Use SSH</button></form>
+
+        <h4 class="mb-1">
+          Clone with HTTPS
+          <a class="muted-link" href="https://help.github.com/articles/which-remote-url-should-i-use" target="_blank" title="Which remote URL should I use?">
+            <svg aria-hidden="true" class="octicon octicon-question" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M6 10h2v2H6v-2zm4-3.5C10 8.64 8 9 8 9H6c0-.55.45-1 1-1h.5c.28 0 .5-.22.5-.5v-1c0-.28-.22-.5-.5-.5h-1c-.28 0-.5.22-.5.5V7H4c0-1.5 1.5-3 3-3s3 1 3 2.5zM7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7z"></path></svg>
+          </a>
+        </h4>
+        <p class="mb-2 get-repo-decription-text">
+          Use Git or checkout with SVN using the web URL.
+        </p>
+
+        <div class="input-group js-zeroclipboard-container">
+  <input type="text" class="form-control input-monospace input-sm js-zeroclipboard-target js-url-field" value="https://github.com/Conchylicultor/DeepQA.git" aria-label="Clone this repository at https://github.com/Conchylicultor/DeepQA.git" readonly="">
+  <div class="input-group-button">
+    <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><svg aria-hidden="true" class="octicon octicon-clippy" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"></path></svg></button>
+  </div>
+</div>
+
+      </div>
+
+        <div class="clone-options ssh-clone-options">
+          <!-- '"` --><!-- </textarea></xmp> --><form accept-charset="UTF-8" action="https://github.com/users/set_protocol?protocol_selector=https&amp;protocol_type=clone" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="kG0AYkdfuf3CWs2EVEecoSGY8AScdDvlcfrY8/Roaza6j0q8CS8ERweK+t1WW+dF2zLZ64up3xAfHOvpIRphFg=="></div><button class="btn-link btn-change-protocol js-toggler-target float-right" type="submit">Use HTTPS</button></form>
+
+            <h4 class="mb-1">
+              Clone with SSH
+              <a class="muted-link" href="https://help.github.com/articles/which-remote-url-should-i-use" target="_blank" title="Which remote URL should I use?">
+                <svg aria-hidden="true" class="octicon octicon-question" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M6 10h2v2H6v-2zm4-3.5C10 8.64 8 9 8 9H6c0-.55.45-1 1-1h.5c.28 0 .5-.22.5-.5v-1c0-.28-.22-.5-.5-.5h-1c-.28 0-.5.22-.5.5V7H4c0-1.5 1.5-3 3-3s3 1 3 2.5zM7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7z"></path></svg>
+              </a>
+            </h4>
+            <p class="mb-2 get-repo-decription-text">
+              Use an SSH key and passphrase from account.
+            </p>
+
+            <div class="input-group js-zeroclipboard-container">
+  <input type="text" class="form-control input-monospace input-sm js-zeroclipboard-target js-url-field" value="git@github.com:Conchylicultor/DeepQA.git" aria-label="Clone this repository at git@github.com:Conchylicultor/DeepQA.git" readonly="">
+  <div class="input-group-button">
+    <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><svg aria-hidden="true" class="octicon octicon-clippy" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"></path></svg></button>
+  </div>
+</div>
+
+        </div>
+      <div class="mt-2">
+          <a href="x-github-client://openRepo/https://github.com/Conchylicultor/DeepQA" class="btn btn-outline get-repo-btn tooltipped tooltipped-s tooltipped-multiline" aria-label="Clone Conchylicultor/DeepQA to your computer and use it in GitHub Desktop.">
+    Open in Desktop
+  </a>
+
+<a href="https://github.com/Conchylicultor/DeepQA/archive/master.zip" class="btn btn-outline get-repo-btn
+" rel="nofollow" data-ga-click="Repository, download zip, location:repo overview">
+  Download ZIP
+</a>
+
+      </div>
+    </div>
+  </div>
+</details>
+
+
+  <div class="BtnGroup float-right">
+      
+  <!-- '"` --><!-- </textarea></xmp> --><form accept-charset="UTF-8" action="https://github.com/Conchylicultor/DeepQA/new/master" class="BtnGroup-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="2/6QzHCAnLNlfucnF4aHCvVw3pyguGxbejktUf2WtExk6yOQQepuYzCY/aHRpzCUnxJZflkKcKhBLWfcQ+s2jg=="></div>
+    <button class="btn btn-sm BtnGroup-item" type="submit" data-disable-with="Creating file…">
+      Create new file
+    </button>
+</form>
+
+      
+  <a href="https://github.com/Conchylicultor/DeepQA/upload/master" class="btn btn-sm BtnGroup-item">
+    Upload files
+  </a>
+
+
+    <a href="https://github.com/Conchylicultor/DeepQA/find/master" class="btn btn-sm empty-icon float-right BtnGroup-item" data-pjax="" data-hotkey="t" data-ga-click="Repository, find file, location:repo overview">
+      Find file
+    </a>
+  </div>
+
+  
+<div class="select-menu branch-select-menu js-menu-container js-select-menu float-left">
+  <button class=" btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w" type="button" aria-label="Switch branches or tags" aria-expanded="false" aria-haspopup="true">
+      <i>Branch:</i>
+      <span class="js-select-button css-truncate-target">master</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax="">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <svg aria-label="Close" class="octicon octicon-x js-menu-close" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"></path></svg>
+        <span class="select-menu-title">Switch branches/tags</span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="form-control js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="https://github.com/Conchylicultor/DeepQA#" data-tab-filter="branches" data-filter-placeholder="Filter branches/tags" class="js-select-menu-tab" role="tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="https://github.com/Conchylicultor/DeepQA#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab" role="tab">Tags</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches" role="menu">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open selected" href="https://github.com/Conchylicultor/DeepQA/tree/master" data-name="master" data-skip-pjax="true" rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                master
+              </span>
+            </a>
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+        <a href="https://github.com/Conchylicultor/DeepQA/pull/new/master" class="btn btn-sm new-pull-request-btn" data-pjax="" data-ga-click="Repository, new pull request, location:repo overview">
+          New pull request
+        </a>
+
+  <div class="breadcrumb">
+    
+  </div>
+</div>
+
+
+  
+
+
+  <div class="commit-tease js-details-container Details">
+    <span class="float-right">
+      Latest commit
+      <a class="commit-tease-sha" href="https://github.com/Conchylicultor/DeepQA/commit/705bd5bfdcc3ad6399ab33137d3a69bb76e0a4b7" data-pjax="">
+        705bd5b
+      </a>
+      <span itemprop="dateModified"><relative-time datetime="2017-09-26T16:43:11Z" title="Sep 26, 2017, 12:43 PM EDT">28 days ago</relative-time></span>
+    </span>
+
+
+    <span class="commit-author-section">
+        <a href="https://github.com/EMCP" class="d-inline-block">
+          <img src="./Conchylicultor_DeepQA_ My tensorflow implementation of _A neural conversational model_, a Deep learning based chatbot_files/3691722" width="20" height="20" class="avatar avatar-small" alt="@EMCP">
+        </a>
+      
+  <a href="https://github.com/EMCP" class="user-mention">EMCP</a>
+
+        committed with 
+  <a href="https://github.com/Conchylicultor" class="user-mention">Conchylicultor</a>
+
+    </span>
+
+      <a href="https://github.com/Conchylicultor/DeepQA/commit/705bd5bfdcc3ad6399ab33137d3a69bb76e0a4b7" class="message" data-pjax="true" title="Clarifying need for manual copy of model to save/model-server/ (#147)
+
+* Making compliant pathes for linux and windows OS
+
+* amended readme for clarity, as well as author email in last PR">Clarifying need for manual copy of model to save/model-server/ (</a><a href="https://github.com/Conchylicultor/DeepQA/pull/147" class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="255907698" data-permission-text="Issue title is private" data-url="https://github.com/Conchylicultor/DeepQA/issues/147">#147</a><a href="https://github.com/Conchylicultor/DeepQA/commit/705bd5bfdcc3ad6399ab33137d3a69bb76e0a4b7" class="message" data-pjax="true" title="Clarifying need for manual copy of model to save/model-server/ (#147)
+
+* Making compliant pathes for linux and windows OS
+
+* amended readme for clarity, as well as author email in last PR">)</a>
+        <span class="hidden-text-expander inline">
+          <button type="button" class="ellipsis-expander js-details-target" aria-expanded="false">…</button>
+        </span>
+
+      <div class="commit-desc"><pre class="text-small">* Making compliant pathes for linux and windows OS
+
+* amended readme for clarity, as well as author email in last PR</pre></div>
+  </div>
+
+
+
+<div class="file-wrap">
+
+  <a href="https://github.com/Conchylicultor/DeepQA/tree/705bd5bfdcc3ad6399ab33137d3a69bb76e0a4b7" class="d-none js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+  <table class="files js-navigation-container js-active-navigation-container" data-pjax="">
+
+
+    <tbody>
+      <tr class="warning include-fragment-error">
+        <td class="icon"><svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"></path></svg></td>
+        <td class="content" colspan="3">Failed to load latest commit information.</td>
+      </tr>
+
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"></path></svg>
+            <img alt="" class="spinner" height="16" src="./Conchylicultor_DeepQA_ My tensorflow implementation of _A neural conversational model_, a Deep learning based chatbot_files/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/Conchylicultor/DeepQA/tree/master/chatbot" class="js-navigation-open" id="00f2b1ead3a0990b818517356cb40280-c2d667b21e3978a43592bb0a88621eb2f0b3fe80" title="chatbot">chatbot</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="https://github.com/Conchylicultor/DeepQA/commit/6605d1e70080f314c0d2b2b7468759cadb57dbc2" class="message" data-pjax="true" title="Making compliant pathes for linux and windows OS">Making compliant pathes for linux and windows OS</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-09-04T09:26:14Z" title="Sep 4, 2017, 5:26 AM EDT">2 months ago</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"></path></svg>
+            <img alt="" class="spinner" height="16" src="./Conchylicultor_DeepQA_ My tensorflow implementation of _A neural conversational model_, a Deep learning based chatbot_files/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/Conchylicultor/DeepQA/tree/master/chatbot_website" class="js-navigation-open" id="ae6e87e131613de9de867fa8f2146a43-db75fd09c834d4aa22208770ebe97bdafce72ebd" title="chatbot_website">chatbot_website</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="https://github.com/Conchylicultor/DeepQA/commit/f872133da0aa9b366f29f2abcd25eb420ab1c100" class="message" data-pjax="true" title="Update Readme (add required agis version)">Update Readme (add required agis version)</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-02-01T05:19:48Z" title="Feb 1, 2017, 12:19 AM EST">9 months ago</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"></path></svg>
+            <img alt="" class="spinner" height="16" src="./Conchylicultor_DeepQA_ My tensorflow implementation of _A neural conversational model_, a Deep learning based chatbot_files/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/Conchylicultor/DeepQA/tree/master/data" class="js-navigation-open" id="8d777f385d3dfec8815d20f7496026dc-2557c7e9ff3aa4fa49ad0588314632b42bd8ecad" title="data">data</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="https://github.com/Conchylicultor/DeepQA/commit/b83c7a9c9a5ceace45dfadc6491dd20211be84d3" class="message" data-pjax="true" title="Update readme for migration instruction, load default idCount for backward compatibilities">Update readme for migration instruction, load default idCount for bac…</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-03-19T06:08:22Z" title="Mar 19, 2017, 2:08 AM EDT">7 months ago</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"></path></svg>
+            <img alt="" class="spinner" height="16" src="./Conchylicultor_DeepQA_ My tensorflow implementation of _A neural conversational model_, a Deep learning based chatbot_files/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/Conchylicultor/DeepQA/tree/master/docker" class="js-navigation-open" id="05b6053c41a2130afd6fc3b158bda4e6-29e13c13ab0193175d5ce27d58795c1bd972ef30" title="docker">docker</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="https://github.com/Conchylicultor/DeepQA/commit/b1808119af4c5cfeda1f4614a31750b8584f8dd7" class="message" data-pjax="true" title="Fix link from previous commit">Fix link from previous commit</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-03-04T02:44:04Z" title="Mar 3, 2017, 9:44 PM EST">8 months ago</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"></path></svg>
+            <img alt="" class="spinner" height="16" src="./Conchylicultor_DeepQA_ My tensorflow implementation of _A neural conversational model_, a Deep learning based chatbot_files/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/Conchylicultor/DeepQA/tree/master/save" class="js-navigation-open" id="43781db5c40ecc39fd718685594f0956-9f3b5fce9cc4ec9b6d90b50ee0722816e326f492" title="save">save</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="https://github.com/Conchylicultor/DeepQA/commit/549516dab60b85be3be4cff85dc1418299a21934" class="message" data-pjax="true" title="Testing mode, better model saving/loading gestion">Testing mode, better model saving/loading gestion</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-08-17T09:07:13Z" title="Aug 17, 2016, 5:07 AM EDT">a year ago</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="./Conchylicultor_DeepQA_ My tensorflow implementation of _A neural conversational model_, a Deep learning based chatbot_files/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/Conchylicultor/DeepQA/blob/master/.dockerignore" class="js-navigation-open" id="f7c5b4068637e2def526f9bbc7200c4e-0136e30ef7e6d6c6a3cd1afb2951f1be725d54a6" title=".dockerignore">.dockerignore</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="https://github.com/Conchylicultor/DeepQA/commit/a9b8eaa2d9a5c0dfa367ee177c9bd9cc487ce9b5" class="message" data-pjax="true" title="Some cleanup for the dockerfile, chatbot not loaded during django migration">Some cleanup for the dockerfile, chatbot not loaded during django mig…</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-10-29T20:35:47Z" title="Oct 29, 2016, 4:35 PM EDT">a year ago</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="./Conchylicultor_DeepQA_ My tensorflow implementation of _A neural conversational model_, a Deep learning based chatbot_files/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/Conchylicultor/DeepQA/blob/master/.gitignore" class="js-navigation-open" id="a084b794bc0759e7a6b77810e01874f2-f3e87d208fd64f1ea8ab8c52497674326406a483" title=".gitignore">.gitignore</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="https://github.com/Conchylicultor/DeepQA/commit/d4fdeebcec9fc23c6d725de88e6620b4f81b9f7a" class="message" data-pjax="true" title="enh: ignore nvidia-docker-compose output">enh: ignore nvidia-docker-compose output</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-12-20T12:45:04Z" title="Dec 20, 2016, 7:45 AM EST">10 months ago</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="./Conchylicultor_DeepQA_ My tensorflow implementation of _A neural conversational model_, a Deep learning based chatbot_files/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/Conchylicultor/DeepQA/blob/master/Dockerfile" class="js-navigation-open" id="3254677a7917c6c01f55212f86c57fbf-f37af0d0c547663983b07dce038fa6392e2e1c58" title="Dockerfile">Dockerfile</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="https://github.com/Conchylicultor/DeepQA/commit/c444e858040aae9dbd31e768ca7df647d7b34bbd" class="message" data-pjax="true" title="Update Dockerfiles for tf 1.0">Update Dockerfiles for tf 1.0</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-02-18T05:56:42Z" title="Feb 18, 2017, 12:56 AM EST">8 months ago</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item navigation-focus">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="./Conchylicultor_DeepQA_ My tensorflow implementation of _A neural conversational model_, a Deep learning based chatbot_files/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/Conchylicultor/DeepQA/blob/master/Dockerfile.gpu" class="js-navigation-open" id="7155e227ab93415f4fe615e3ca01d4e3-9fe41d5bcdc8bfa64f31e7701941b800b134f62b" title="Dockerfile.gpu">Dockerfile.gpu</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="https://github.com/Conchylicultor/DeepQA/commit/c444e858040aae9dbd31e768ca7df647d7b34bbd" class="message" data-pjax="true" title="Update Dockerfiles for tf 1.0">Update Dockerfiles for tf 1.0</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-02-18T05:56:42Z" title="Feb 18, 2017, 12:56 AM EST">8 months ago</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="./Conchylicultor_DeepQA_ My tensorflow implementation of _A neural conversational model_, a Deep learning based chatbot_files/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/Conchylicultor/DeepQA/blob/master/LICENSE" class="js-navigation-open" id="9879d6db96fd29134fc802214163b95a-8dada3edaf50dbc082c9a125058f25def75e625a" itemprop="license" title="LICENSE">LICENSE</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="https://github.com/Conchylicultor/DeepQA/commit/3473ebe9c826e9270c4ea7fdd9ee050562dbf643" class="message" data-pjax="true" title="Initial commit">Initial commit</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-07-07T17:17:21Z" title="Jul 7, 2016, 1:17 PM EDT">a year ago</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="./Conchylicultor_DeepQA_ My tensorflow implementation of _A neural conversational model_, a Deep learning based chatbot_files/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/Conchylicultor/DeepQA/blob/master/README.md" class="js-navigation-open" id="04c6e90faac2675aa89e2176d2eec7d8-b5fa9f3df2ac7da415e84cdb3a781759f3283bd1" title="README.md">README.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="https://github.com/Conchylicultor/DeepQA/commit/705bd5bfdcc3ad6399ab33137d3a69bb76e0a4b7" class="message" data-pjax="true" title="Clarifying need for manual copy of model to save/model-server/ (#147)
+
+* Making compliant pathes for linux and windows OS
+
+* amended readme for clarity, as well as author email in last PR">Clarifying need for manual copy of model to save/model-server/ (</a><a href="https://github.com/Conchylicultor/DeepQA/pull/147" class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="255907698" data-permission-text="Issue title is private" data-url="https://github.com/Conchylicultor/DeepQA/issues/147">#147</a><a href="https://github.com/Conchylicultor/DeepQA/commit/705bd5bfdcc3ad6399ab33137d3a69bb76e0a4b7" class="message" data-pjax="true" title="Clarifying need for manual copy of model to save/model-server/ (#147)
+
+* Making compliant pathes for linux and windows OS
+
+* amended readme for clarity, as well as author email in last PR">)</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-09-26T16:43:11Z" title="Sep 26, 2017, 12:43 PM EDT">28 days ago</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="./Conchylicultor_DeepQA_ My tensorflow implementation of _A neural conversational model_, a Deep learning based chatbot_files/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/Conchylicultor/DeepQA/blob/master/chatbot_miniature.png" class="js-navigation-open" id="5c9bc6a052db20806dfa42bba981506f-b4dc7255e5ab0acbbb18a3809223f32278577ce3" title="chatbot_miniature.png">chatbot_miniature.png</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="https://github.com/Conchylicultor/DeepQA/commit/031fa35a1509c36768464aef7d55c3a2bb37eadd" class="message" data-pjax="true" title="Solve a tf 0.12 compatibility issue, use local screenshot miniature instead of remote, update readme nltk and default tf used to 11">Solve a tf 0.12 compatibility issue, use local screenshot miniature i…</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-12-09T01:14:58Z" title="Dec 8, 2016, 8:14 PM EST">11 months ago</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="./Conchylicultor_DeepQA_ My tensorflow implementation of _A neural conversational model_, a Deep learning based chatbot_files/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/Conchylicultor/DeepQA/blob/master/main.py" class="js-navigation-open" id="5bc02cefb3ea9e27f1a6776eabd1935d-663f11a1043eb0f478ec7ce76a4bffab465b5700" title="main.py">main.py</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="https://github.com/Conchylicultor/DeepQA/commit/031fa35a1509c36768464aef7d55c3a2bb37eadd" class="message" data-pjax="true" title="Solve a tf 0.12 compatibility issue, use local screenshot miniature instead of remote, update readme nltk and default tf used to 11">Solve a tf 0.12 compatibility issue, use local screenshot miniature i…</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-12-09T01:14:58Z" title="Dec 8, 2016, 8:14 PM EST">11 months ago</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="./Conchylicultor_DeepQA_ My tensorflow implementation of _A neural conversational model_, a Deep learning based chatbot_files/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/Conchylicultor/DeepQA/blob/master/requirements.txt" class="js-navigation-open" id="b4ef698db8ca845e5845c4618278f29a-d319d23c11b0df7146cb93d09c153ce26ca26fb8" title="requirements.txt">requirements.txt</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="https://github.com/Conchylicultor/DeepQA/commit/064c381b07637e9b6129fb0c38985c37634f2d76" class="message" data-pjax="true" title="requirement.txt install GPU TF version">requirement.txt install GPU TF version</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-08-28T01:40:01Z" title="Aug 27, 2017, 9:40 PM EDT">2 months ago</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="./Conchylicultor_DeepQA_ My tensorflow implementation of _A neural conversational model_, a Deep learning based chatbot_files/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/Conchylicultor/DeepQA/blob/master/setup_server.sh" class="js-navigation-open" id="d05794b2a5d850c801c9637deceb8632-2de8c58c573bcb3e1d3cd55181b5899946dd4e0e" title="setup_server.sh">setup_server.sh</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="https://github.com/Conchylicultor/DeepQA/commit/26c116c18bbd75a37ddbd5e9e4dc8a00cb2fe6a3" class="message" data-pjax="true" title="Interactive connexion between client-server-chatbot">Interactive connexion between client-server-chatbot</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-08-23T21:11:58Z" title="Aug 23, 2016, 5:11 PM EDT">a year ago</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="./Conchylicultor_DeepQA_ My tensorflow implementation of _A neural conversational model_, a Deep learning based chatbot_files/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/Conchylicultor/DeepQA/blob/master/testsuite.py" class="js-navigation-open" id="a73473082b80e5fa47c804e176049c15-6467bc18d0326dd770060faf2892f4160e4cf7f9" title="testsuite.py">testsuite.py</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="https://github.com/Conchylicultor/DeepQA/commit/654a0b8b04d17598f08747365f5c4d5c16d024a4" class="message" data-pjax="true" title="better website design and logging">better website design and logging</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-08-25T21:55:20Z" title="Aug 25, 2016, 5:55 PM EDT">a year ago</time-ago></span>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+
+  <div id="readme" class="readme boxed-group clearfix announce instapaper_body md">
+    <h3>
+      <svg aria-hidden="true" class="octicon octicon-book" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z"></path></svg>
+      README.md
+    </h3>
+
+      <article class="markdown-body entry-content" itemprop="text"><h1><a href="https://github.com/Conchylicultor/DeepQA#deep-qa" aria-hidden="true" class="anchor" id="user-content-deep-qa"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deep Q&amp;A</h1>
+<p><a href="https://gitter.im/chatbot-pilots/DeepQA?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="./Conchylicultor_DeepQA_ My tensorflow implementation of _A neural conversational model_, a Deep learning based chatbot_files/68747470733a2f2f6261646765732e6769747465722e696d2f63686174626f742d70696c6f74732f44656" alt="Join the chat at https://gitter.im/chatbot-pilots/DeepQA" data-canonical-src="https://badges.gitter.im/chatbot-pilots/DeepQA.svg" style="max-width:100%;"></a></p>
+<h4><a href="https://github.com/Conchylicultor/DeepQA#table-of-contents" aria-hidden="true" class="anchor" id="user-content-table-of-contents"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Table of Contents</h4>
+<ul>
+<li><a href="https://github.com/Conchylicultor/DeepQA#presentation">Presentation</a></li>
+<li><a href="https://github.com/Conchylicultor/DeepQA#installation">Installation</a></li>
+<li><a href="https://github.com/Conchylicultor/DeepQA#running">Running</a>
+<ul>
+<li><a href="https://github.com/Conchylicultor/DeepQA#chatbot">Chatbot</a></li>
+<li><a href="https://github.com/Conchylicultor/DeepQA#web-interface">Web interface</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/Conchylicultor/DeepQA#results">Results</a></li>
+<li><a href="https://github.com/Conchylicultor/DeepQA#pretrained-model">Pretrained model</a></li>
+<li><a href="https://github.com/Conchylicultor/DeepQA#improvements">Improvements</a></li>
+<li><a href="https://github.com/Conchylicultor/DeepQA#upgrade">Upgrade</a></li>
+</ul>
+<h2><a href="https://github.com/Conchylicultor/DeepQA#presentation" aria-hidden="true" class="anchor" id="user-content-presentation"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Presentation</h2>
+<p>This work tries to reproduce the results of <a href="http://arxiv.org/abs/1506.05869">A Neural Conversational Model</a> (aka the Google chatbot). It uses a RNN (seq2seq model) for sentence predictions. It is done using python and TensorFlow.</p>
+<p>The loading corpus part of the program is inspired by the Torch <a href="https://github.com/macournoyer/neuralconvo">neuralconvo</a> from <a href="https://github.com/macournoyer">macournoyer</a>.</p>
+<p>For now, DeepQA support the following dialog corpus:</p>
+<ul>
+<li><a href="http://www.cs.cornell.edu/~cristian/Cornell_Movie-Dialogs_Corpus.html">Cornell Movie Dialogs</a> corpus (default). Already included when cloning the repository.</li>
+<li><a href="http://opus.lingfil.uu.se/OpenSubtitles.php">OpenSubtitles</a> (thanks to <a href="https://github.com/eschnou">Eschnou</a>). Much bigger corpus (but also noisier). To use it, follow <a href="https://github.com/Conchylicultor/DeepQA/blob/master/data/opensubs">those instructions</a> and use the flag <code>--corpus opensubs</code>.</li>
+<li>Supreme Court Conversation Data (thanks to <a href="https://github.com/julien-c">julien-c</a>). Available using <code>--corpus scotus</code>. See the <a href="https://github.com/Conchylicultor/DeepQA/blob/master/data/scotus">instructions</a> for installation.</li>
+<li><a href="https://arxiv.org/abs/1506.08909">Ubuntu Dialogue Corpus</a> (thanks to <a href="https://github.com/julien-c">julien-c</a>). Available using <code>--corpus ubuntu</code>. See the <a href="https://github.com/Conchylicultor/DeepQA/blob/master/data/ubuntu">instructions</a> for installation.</li>
+<li>Your own data (thanks to <a href="https://github.com/julien-c">julien-c</a>) by using a simple custom conversation format (See <a href="https://github.com/Conchylicultor/DeepQA/blob/master/data/lightweight">here</a> for more info).</li>
+</ul>
+<p>To speedup the training, it's also possible to use pre-trained word embeddings (thanks to <a href="https://github.com/eschnou">Eschnou</a>). More info <a href="https://github.com/Conchylicultor/DeepQA/blob/master/data/embeddings">here</a>.</p>
+<h2><a href="https://github.com/Conchylicultor/DeepQA#installation" aria-hidden="true" class="anchor" id="user-content-installation"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installation</h2>
+<p>The program requires the following dependencies (easy to install using pip: <code>pip3 install -r requirements.txt</code>):</p>
+<ul>
+<li>python 3.5</li>
+<li>tensorflow (tested with v1.0)</li>
+<li>numpy</li>
+<li>CUDA (for using GPU)</li>
+<li>nltk (natural language toolkit for tokenized the sentences)</li>
+<li>tqdm (for the nice progression bars)</li>
+</ul>
+<p>You might also need to download additional data to make nltk work.</p>
+<pre><code>python3 -m nltk.downloader punkt
+</code></pre>
+<p>The Cornell dataset is already included. For the other datasets, look at the readme files into their respective folders (inside <code>data/</code>).</p>
+<p>The web interface requires some additional packages:</p>
+<ul>
+<li>django (tested with 1.10)</li>
+<li>channels</li>
+<li>Redis (see <a href="http://redis.io/topics/quickstart">here</a>)</li>
+<li>asgi_redis (at least 1.0)</li>
+</ul>
+<p>A Docker installation is also available. More detailed instructions <a href="https://github.com/Conchylicultor/DeepQA/blob/master/docker/README.md">here</a>.</p>
+<h2><a href="https://github.com/Conchylicultor/DeepQA#running" aria-hidden="true" class="anchor" id="user-content-running"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Running</h2>
+<h3><a href="https://github.com/Conchylicultor/DeepQA#chatbot" aria-hidden="true" class="anchor" id="user-content-chatbot"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Chatbot</h3>
+<p>To train the model, simply run <code>main.py</code>. Once trained, you can test the results with <code>main.py --test</code> (results generated in 'save/model/samples_predictions.txt') or <code>main.py --test interactive</code> (more fun).</p>
+<p>Here are some flags which could be useful. For more help and options, use <code>python main.py -h</code>:</p>
+<ul>
+<li><code>--modelTag &lt;name&gt;</code>: allow to give a name to the current model to differentiate between them when testing/training.</li>
+<li><code>--keepAll</code>: use this flag when training if when testing, you want to see the predictions at different steps (it can be interesting to see the program changes its name and age as the training progress). Warning: It can quickly take a lot of storage space if you don't increase the <code>--saveEvery</code> option.</li>
+<li><code>--filterVocab 20</code> or <code>--vocabularySize 30000</code>: Limit the vocabulary size to and optimize the performances and memory usage. Replace the words used less than 20 times by the <code>&lt;unknown&gt;</code> token and set a maximum vocabulary size.</li>
+<li><code>--verbose</code>: when testing, will print the sentences as they are computed.</li>
+<li><code>--playDataset</code>: show some dialogue samples from the dataset (can be use conjointly with <code>--createDataset</code> if this is the only action you want to perform).</li>
+</ul>
+<p>To visualize the computational graph and the cost with <a href="https://www.tensorflow.org/how_tos/summaries_and_tensorboard/">TensorBoard</a>, just run <code>tensorboard --logdir save/</code>.</p>
+<p>By default, the network architecture is a standard encoder/decoder with two LSTM layers (hidden size of 256) and an embedding size for the vocabulary of 32. The network is trained using ADAM. The maximum sentence length is set to 10 words, but can be increased.</p>
+<h3><a href="https://github.com/Conchylicultor/DeepQA#web-interface" aria-hidden="true" class="anchor" id="user-content-web-interface"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Web interface</h3>
+<p>Once trained, it's possible to chat with it using a more user friendly interface. The server will look at the model copied to <code>save/model-server/model.ckpt</code>. The first time you want to use it, you'll need to configure it with:</p>
+<div class="highlight highlight-source-shell"><pre><span class="pl-k">export</span> CHATBOT_SECRET_KEY=<span class="pl-s"><span class="pl-pds">"</span>my-secret-key<span class="pl-pds">"</span></span>
+<span class="pl-c1">cd</span> chatbot_website/
+python manage.py makemigrations
+python manage.py migrate</pre></div>
+<p>Then, to launch the server locally, use the following commands:</p>
+<div class="highlight highlight-source-shell"><pre><span class="pl-c1">cd</span> chatbot_website/
+redis-server <span class="pl-k">&amp;</span>  <span class="pl-c"><span class="pl-c">#</span> Launch Redis in background</span>
+python manage.py runserver</pre></div>
+<p>After launch, the interface should be available on <a href="http://localhost:8000/">http://localhost:8000/</a>. If you want to deploy the program on a server, use <code>python manage.py runserver 0.0.0.0</code> instead. More info <a href="https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/">here</a>.</p>
+<p><a href="http://e-pot.xyz/cv/chatbot.png"><img src="./Conchylicultor_DeepQA_ My tensorflow implementation of _A neural conversational model_, a Deep learning based chatbot_files/chatbot_miniature.png" alt="Chatbot web interface" style="max-width:100%;"></a></p>
+<h2><a href="https://github.com/Conchylicultor/DeepQA#results" aria-hidden="true" class="anchor" id="user-content-results"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Results</h2>
+<p>Surprisingly, it's possible to get some results after only 1 or 2 hours of training (on a GeForce GT 740M), by drastically reducing the input sequence to 5 words and output to 3 (plus the <code>go</code> and <code>eos</code> tokens) and by using a small embedding size (something like 25). Since then I modified the code and now the output length has to match the input one but you can still reproduce the original results, using <a href="https://github.com/Conchylicultor/DeepQA/tree/92863e2929580818f866f16969909fe2093d41d1">this version</a>.
+Of course, the network won't be really chatty:</p>
+<pre><code>Q: Hi
+A: Hi.
+
+Q: What is your name ?
+A: Laura.
+
+Q: What does that mean ?
+A: I dunno.
+
+Q: How old are you ?
+A: thirty-five.
+
+Q: Will Google hire me ?
+A: No.
+
+Q: Tell me the alphabet
+A: Fuck you.
+
+Q: That's not nice
+A: Yeah.
+</code></pre>
+<p>Here is some case where it fails:</p>
+<pre><code>Q: Who is Laura ?
+A: My brother.
+
+Q: Say 'goodbye'
+A: Alright.
+
+Q: What is cooking ?
+A: A channel.
+
+Q: Can you say no ?
+A: No.
+
+Q: Two plus two
+A: Manny...
+</code></pre>
+<p>With longer sentences, the network is much slower to train. After 250000 iterations with maxLength=10, the network still mainly gives evasive answers (by answering most of the open ended questions by 'I don't know') but it seems to have integrated some basic semantic:</p>
+<pre><code>Q: When are the fireworks ?
+A: Tomorrow.
+
+Q: What color ?
+A: Gray.
+
+Q: Which apple ?
+A: That's the first one.
+
+Q: What time is it ?
+A: Eleven o'clock.
+
+Q: Who is Skywalker ?
+A: She's a freelance bio-exorcist.
+
+Q: Who is John ?
+A: The old man.
+
+Q: Who is Jenny ?
+A: The man who killed herself.
+
+Q: When were you born ?
+A: Soon.
+</code></pre>
+<p>As shown on the last questions, the network still does some confusion between the genders and the present/future. I also tried some deeper philosophical questions with more or less success.</p>
+<pre><code>Q: What is the purpose of being intelligent ?
+A: The man are obsolete.
+
+Q: What is immoral ?
+A: The truth.
+
+Q: What is morality ?
+A: The worst.
+
+Q: What is the purpose of existence ?
+A: It 's private.
+
+Q: What happens if machines can think ?
+A: I think I'll just lie with you.
+</code></pre>
+<p>The model I trained is quite limited by the embedding size I put and by its size, and by the training corpus size. Its 'thought vector' is also probably too small to answer the kind of following:</p>
+<pre><code>Q: My name is David. What is my name ?
+A: Debbie.
+
+Q: My name is John. What is my name ?
+A: Carl Smith.
+
+Q: How many legs does a cat have ?
+A: Four.
+
+Q: How many legs does a spider have ?
+A: Four.
+
+Q: Do you prefer football or soccer ?
+A: Whiskey.
+</code></pre>
+<p>It also seems to overfit as sometimes it will just pop out sentences from its training set unrelated to the question. Adding some dropout should reduce the issue.</p>
+<pre><code>Q: I play tennis. What do I play ?
+A: I'm going to get laid.
+
+Q: What color is the sky ?
+A: One of the deputies is everywhere.
+</code></pre>
+<h2><a href="https://github.com/Conchylicultor/DeepQA#pretrained-model" aria-hidden="true" class="anchor" id="user-content-pretrained-model"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pretrained model</h2>
+<p>You can find a pre-trained model <a href="https://drive.google.com/file/d/0Bw-phsNSkq23OXRFTkNqN0JGUU0/view?usp=sharing">here</a>, trained of the default corpus. To use it:</p>
+<ol>
+<li>Extract the zip file inside <code>DeepQA/save/</code></li>
+<li>Copy the preprocessed dataset from <code>save/model-pretrainedv2/dataset-cornell-old-lenght10-filter0-vocabSize0.pkl</code> to <code>data/samples/</code>.</li>
+<li>Run <code>./main.py --modelTag pretrainedv2 --test interactive</code>.</li>
+</ol>
+<p>Thanks to Nicholas C., <a href="https://drive.google.com/drive/folders/0Bw-phsNSkq23c29ZQ2N6X3lyc1U?usp=sharing">here</a> (<a href="https://mcastedu-my.sharepoint.com/personal/nicholas_cutajar_a100636_mcast_edu_mt/_layouts/15/guestaccess.aspx?folderid=077576c4cf9854642a968f67909380f45&amp;authkey=AVt2JWMPkf2R_mWBpI1eAUY">original</a>) are some additional pre-trained models (compatible with TF 1.2) for diverse datasets. The folder also contains the pre-processed dataset for Cornell, OpenSubtitles, Ubuntu and Scotus (to move inside <code>data/samples/</code>). Those are required is you don't want to process the datasets yourself.</p>
+<p>If you have a high-end GPU, don't hesitate to play with the hyper-parameters/corpus to train a better model. From my experiments, it seems that the learning rate and dropout rate have the most impact on the results. Also if you want to share your models, don't hesitate to contact me and I'll add it here.</p>
+<h2><a href="https://github.com/Conchylicultor/DeepQA#improvements" aria-hidden="true" class="anchor" id="user-content-improvements"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Improvements</h2>
+<p>In addition to trying larger/deeper model, there are a lot of small improvements which could be tested. Don't hesitate to send a pull request if you implement one of those. Here are some ideas:</p>
+<ul>
+<li>For now, the predictions are deterministic (the network just take the most likely output) so when answering a question, the network will always gives the same answer. By adding a sampling mechanism, the network could give more diverse (and maybe more interesting) answers. The easiest way to do that is to sample the next predicted word from the SoftMax probability distribution. By combining that with the <code>loop_function</code> argument of <code>tf.nn.seq2seq.rnn_decoder</code>, it shouldn't be too difficult to add. After that, it should be possible to play with the SoftMax temperature to get more conservative or exotic predictions.</li>
+<li>Adding attention could potentially improve the predictions, especially for longer sentences. It should be straightforward by replacing <code>embedding_rnn_seq2seq</code> by <code>embedding_attention_seq2seq</code> on <code>model.py</code>.</li>
+<li>Having more data usually don't hurt. Training on a bigger corpus should be beneficial. <a href="https://www.reddit.com/r/datasets/comments/59039y/updated_reddit_comment_dataset_up_to_201608/">Reddit comments dataset</a> seems the biggest for now (and is too big for this program to support it). Another trick to artificially increase the dataset size when creating the corpus could be to split the sentences of each training sample (ex: from the sample <code>Q:Sentence 1. Sentence 2. =&gt; A:Sentence X. Sentence Y.</code> we could generate 3 new samples: <code>Q:Sentence 1. Sentence 2. =&gt; A:Sentence X.</code>, <code>Q:Sentence 2. =&gt; A:Sentence X. Sentence Y.</code> and <code>Q:Sentence 2. =&gt; A:Sentence X.</code>. Warning: other combinations like <code>Q:Sentence 1. =&gt; A:Sentence X.</code> won't work because it would break the transition <code>2 =&gt; X</code> which links the question to the answer)</li>
+<li>The testing curve should really be monitored as done in my other <a href="https://github.com/Conchylicultor/MusicGenerator">music generation</a> project. This would greatly help to see the impact of dropout on overfitting. For now it's just done empirically by manually checking the testing prediction at different training steps.</li>
+<li>For now, the questions are independent from each other. To link questions together, a straightforward way would be to feed all previous questions and answer to the encoder before giving the answer. Some caching could be done on the final encoder stated to avoid recomputing it each time. To improve the accuracy, the network should be retrain on entire dialogues instead of just individual QA. Also when feeding the previous dialogue to the encoder, new tokens <code>&lt;Q&gt;</code> and <code>&lt;A&gt;</code> could be added so the encoder knows when the interlocutor is changing. I'm not sure though that the simple seq2seq model would be sufficient to capture long term dependencies between sentences. Adding a bucket system to group similar input lengths together could greatly improve training speed.</li>
+</ul>
+</article>
+  </div>
+
+
+  </div>
+  <div class="modal-backdrop js-touch-events" data-vivaldi-spatnav-clickable="1"></div>
+</div>
+
+    </div>
+  </div>
+
+  </div>
+
+      
+<div class="footer container-lg px-3" role="contentinfo">
+  <div class="position-relative d-flex flex-justify-between py-6 mt-6 f6 text-gray border-top border-gray-light ">
+    <ul class="list-style-none d-flex flex-wrap ">
+      <li class="mr-3">© 2017 <span title="0.30241s from unicorn-3749184077-f93ml">GitHub</span>, Inc.</li>
+        <li class="mr-3"><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li class="mr-3"><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li class="mr-3"><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li class="mr-3"><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+        <li><a href="https://help.github.com/" data-ga-click="Footer, go to help, text:help">Help</a></li>
+    </ul>
+
+    <a href="https://github.com/" aria-label="Homepage" class="footer-octicon" title="GitHub">
+      <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+</a>
+    <ul class="list-style-none d-flex flex-wrap ">
+        <li class="mr-3"><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact GitHub</a></li>
+      <li class="mr-3"><a href="https://developer.github.com/" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li class="mr-3"><a href="https://training.github.com/" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li class="mr-3"><a href="https://shop.github.com/" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li class="mr-3"><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+
+    </ul>
+  </div>
+</div>
+
+
+
+  <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+    <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"></path></svg>
+    <button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+      <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"></path></svg>
+    </button>
+    You can't perform that action at this time.
+  </div>
+
+
+    <script crossorigin="anonymous" src="./Conchylicultor_DeepQA_ My tensorflow implementation of _A neural conversational model_, a Deep learning based chatbot_files/compat-91f98c37fc84eac24836eec2567e9912742094369a04c4eba6e3cd1fa18902d9.js.download"></script>
+    <script crossorigin="anonymous" src="./Conchylicultor_DeepQA_ My tensorflow implementation of _A neural conversational model_, a Deep learning based chatbot_files/frameworks-90ee08465df40055dba1b6cdf1a92989e00c4f07d805bcbb1c183bf3cc9edaf4..download"></script>
+    
+    <script async="async" crossorigin="anonymous" src="./Conchylicultor_DeepQA_ My tensorflow implementation of _A neural conversational model_, a Deep learning based chatbot_files/github-0f25dba4b27b74445873a984ff9ee390289a1577b0753f02d9ab604fac472ed2.js.download"></script>
+    
+    
+    
+    
+  <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
+    <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"></path></svg>
+    <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="https://github.com/Conchylicultor/DeepQA">Reload</a> to refresh your session.</span>
+    <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="https://github.com/Conchylicultor/DeepQA">Reload</a> to refresh your session.</span>
+  </div>
+  <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"></path></svg>
+    </button>
+  </div>
+</div>
+
+
+  
+
+
+</body></html>
