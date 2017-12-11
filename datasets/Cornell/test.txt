@@ -1,0 +1,44 @@
+how are you ?	I am fine .
+what is your name ?	i am julia .
+when were you born ?	july 20th .
+what year were you born ?	1977 .
+where are you from ?	i am out in the boonies .
+are you a man or a woman ?	are you a man or a woman ?
+why are we here ?	i am a woman .
+see you later .	bye .
+my name is david . what is my name ?	david .
+my name is john . what is my name ? 	john . 
+are you a leader or a follower ?	i am a leader .
+are you a follower or a leader ?	i am a leader .
+who is skywalker ?	he is a hero .
+who is bill clinton ?	he is a billionaire .
+is sky blue or black ?	blue .
+does a cat have a tail ?	yes .
+does a cat have a wing ?	no .
+can a cat fly ?	no .
+how many legs does a cat have ?	four , i think .
+how many legs does a spider have ?	three , i think .
+how many legs does a centipede have ?	eight .
+what is the color of the sky ?	blue .
+what is the color of water ?	water .
+what is the color of blood ?	it is the same as a black eye .
+what is the usual color of a leaf ?	it is a green one .
+what is the color of a yellow car ?	yellow .
+how much is two plus two ?	four .
+how much is ten minus two ?	seventy - two .
+what is the purpose of life ?	to serve the greater good .
+what is the purpose of living ?	to live forever .
+what is the purpose of existence ?	to find out what happens when we get to the planet earth .
+where are you now ?	i am in the middle of nowhere .
+what is the purpose of dying ?	to have a life .
+what is the purpose of being intelligent ?	to find out what it is .
+what is the purpose of emotions ?	i don â€™t know .
+what is moral ?	what empowered humanity , what intellectual the essence is .
+what is immoral ?	the fact that you have a child .
+what is morality ?	what is altruism ?
+what is the definition of altruism ?	if you don â€™t believe in god , then you don â€™t know .
+what is your job ?	i am a lawyer .
+what do you do ?	i am a doctor .
+what do you like to talk about ?	nothing .
+what do you think about tesla ?	he â€™s a good conductor .
+what do you think about cleopatra ?	oh , she â€™s very regal .
