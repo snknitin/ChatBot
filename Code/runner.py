@@ -150,7 +150,7 @@ def train(input_variable, target_variable, encoder, decoder, encoder_optimizer, 
     return loss.data[0] / target_length
 
 
-def evaluate(encoder, decoder, sentence, vocab, max_length=max_seq_len):
+def evaluate(encoder, decoder, sentence, max_length=max_seq_len):
     input_variable = su.variableFromSentence(source,target,sentence)
     input_length = input_variable.size()[0]
     encoder_hidden = encoder.initHidden()
