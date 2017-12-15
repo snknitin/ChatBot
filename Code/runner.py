@@ -220,7 +220,7 @@ def writeresults(encoder, decoder):
 
 
 if __name__ == '__main__':
-    input_dir = "./data/"
+    input_dir = "/mnt/nfs/scratch1/nsamala/dialogsystems/ChatBot-Text-Summarizer/datasets/Cornell/"
     model_dir = input_dir + 'models/'
     if not os.path.exists(model_dir):
         os.makedirs(model_dir)
