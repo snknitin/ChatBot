@@ -35,7 +35,7 @@ UNK_token = 2
 max_seq_len=20
 
 
-def trainIters(encoder, decoder, n_iters, save_every=5000, print_every=1000, plot_every=100, learning_rate=0.001):
+def trainIters(encoder, decoder, n_iters, save_every=5000, print_every=100, plot_every=100, learning_rate=0.001):
     start = time.time()
     print_time_start = start
     plot_losses = []
@@ -232,7 +232,7 @@ if __name__ == '__main__':
     hidden_size = 256
 
     n_iters = 12000
-    print_every = 1000
+    print_every = 100
     save_every = 5000
     plot_every = 100
     learning_rate=0.001
