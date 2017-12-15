@@ -194,7 +194,7 @@ def indexesFromSentence(lang, sentence):
 def variableFromSentence(lang, sentence):
     indexes = indexesFromSentence(lang, sentence)
     indexes.append(EOS_token)
-    result = Variable(torch.LongTensor(indexes).view(-1, 1))
+    result = Variable(torch.FloatTensor(indexes).view(-1, 1))
     if use_cuda:
         return result.cuda()
     else:
