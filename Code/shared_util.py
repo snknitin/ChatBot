@@ -124,24 +124,7 @@ def timeSince(since, percent):
 # EOS token to both sequences.
 #
 
-def indexesFromSentence(lang, sentence):
-    return [lang.word2index[word] for word in sentence.split(' ')]
 
-
-def variableFromSentence(lang, sentence):
-    indexes = indexesFromSentence(lang, sentence)
-    indexes.append(EOS_token)
-    result = Variable(torch.LongTensor(indexes).view(-1, 1))
-    if use_cuda:
-        return result.cuda()
-    else:
-        return result
-
-
-def variablesFromPair(pair):
-    input_variable = variableFromSentence(input_lang, pair[0])
-    target_variable = variableFromSentence(output_lang, pair[1])
-    return (input_variable, target_variable)
 
 
 def textproc(s):
@@ -186,10 +169,10 @@ def indexes2sent(indexes, ivocab, ignore_tok=-1):
 
 SOS_token = 0
 EOS_token = 1
-UNK_token = 1
+UNK_token = 2
 
 def indexesFromSentence(lang, sentence):
-    return [lang.word2index[word] for word in sentence.split(' ')]
+    return [lang.word2index[word] if word in lang.word2index.keys() else 2 for word in sentence.split(' ')]
 
 
 def variableFromSentence(lang, sentence):
