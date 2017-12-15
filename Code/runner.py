@@ -205,10 +205,10 @@ def evaluateRandomly(encoder, decoder, n=20):
         target.close()
 
 def writeresults(encoder, decoder):
-    with open(input_dir + "valpred.txt", "w") as target:
-        with open(input_dir + "valid.txt", "r") as doc:
-            lines=doc.read().strip().split('\n')
-            valid_pairs = [[su.textproc(su.normalizeString(s)) for s in l.strip('\r\n').split('\t')] for l in lines]
+    with open(input_dir + "valid.txt", "r") as doc:
+        lines=doc.read().split('\n')
+        valid_pairs = [[su.textproc(su.normalizeString(s)) for s in l.strip('\r\n').split('\t')] for l in lines]
+        with open(input_dir + "valpred.txt", "w") as target:
             for i in range(len(valid_pairs)):
                 qapair = valid_pairs[i]
                 target.write('> ' + qapair[0])
@@ -220,8 +220,8 @@ def writeresults(encoder, decoder):
                 target.write('< ' + output_sentence)
                 target.write('\n')
                 target.write('\n\n')
-            doc.close()
-        target.close()
+            target.close()
+        doc.close()
 
 
 
@@ -237,12 +237,12 @@ if __name__ == '__main__':
     pairs_path = input_dir + "train_pairs.pickle"
     hidden_size = 256
 
-    n_iters = 12000
+    n_iters = 100
     print_every = 100
     save_every = 5000
     plot_every = 100
     learning_rate=0.001
-    reload_from = -1
+    reload_from = 10000
 
     source=su.loadpickle(source_path)
     target=su.loadpickle(target_path)
@@ -259,7 +259,7 @@ if __name__ == '__main__':
         decoder = decoder.cuda()
 
     print("Training")
-    trainIters(encoder, decoder, n_iters, save_every=save_every, print_every=print_every, plot_every=plot_every, learning_rate=learning_rate)
+    #trainIters(encoder, decoder, n_iters, save_every=save_every, print_every=print_every, plot_every=plot_every, learning_rate=learning_rate)
 
-    evaluateRandomly(encoder, decoder)
+    #evaluateRandomly(encoder, decoder)
     writeresults(encoder, decoder)
