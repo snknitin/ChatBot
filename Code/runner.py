@@ -194,25 +194,31 @@ def evaluateRandomly(encoder, decoder, n=20):
         for i in range(n):
             pair = random.choice(pairs)
             target.write('> '+ pair[0])
+            target.write('\n')
             target.write('= '+ pair[1])
+            target.write('\n')
             output_words, attentions = evaluate(encoder, decoder, pair[0])
             output_sentence = ' '.join(output_words)
             target.write('< '+ output_sentence)
+            target.write('\n')
             target.write('\n\n')
         target.close()
 
 def writeresults(encoder, decoder):
     with open(input_dir + "valpred.txt", "w") as target:
-        with open(input_dir + "valid.txt", "w") as doc:
+        with open(input_dir + "valid.txt", "r") as doc:
             lines=doc.read().strip().split('\n')
             valid_pairs = [[su.textproc(su.normalizeString(s)) for s in l.strip('\r\n').split('\t')] for l in lines]
             for i in range(len(valid_pairs)):
                 qapair = valid_pairs[i]
                 target.write('> ' + qapair[0])
+                target.write('\n')
                 target.write('= ' + qapair[1])
+                target.write('\n')
                 output_words, attentions = evaluate(encoder, decoder, qapair[0])
                 output_sentence = ' '.join(output_words)
                 target.write('< ' + output_sentence)
+                target.write('\n')
                 target.write('\n\n')
             doc.close()
         target.close()
