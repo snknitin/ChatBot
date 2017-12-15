@@ -47,7 +47,7 @@ def trainIters(encoder, decoder, n_iters, save_every=5000, print_every=1000, plo
     training_pairs = [su.variablesFromPair(source,target,random.choice(pairs))
                       for i in range(n_iters)]
     criterion1 = nn.NLLLoss(weight=None, size_average=True)
-    criterion2 = nn.KLDivLoss(size_average=True, reduce=True)
+    criterion2 = nn.KLDivLoss(size_average=True)
     #criterion3 = nn.PoissonNLLLoss(log_input=True, full=False, size_average=True, eps=1e-08)
 
     for iter in range(1, n_iters + 1):
@@ -181,7 +181,7 @@ def evaluate(encoder, decoder, sentence, vocab, max_length=max_seq_len):
             decoded_words.append('<EOS>')
             break
         else:
-            decoded_words.append(ivocab[ni])
+            decoded_words.append(target.index2word[ni])
 
         decoder_input = Variable(torch.LongTensor([[ni]]))
         decoder_input = decoder_input.cuda() if use_cuda else decoder_input
