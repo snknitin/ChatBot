@@ -47,7 +47,7 @@ def trainIters(encoder, decoder, n_iters, save_every=5000, print_every=1000, plo
     training_pairs = [su.variablesFromPair(source,target,random.choice(pairs))
                       for i in range(n_iters)]
     criterion1 = nn.NLLLoss(weight=None, size_average=True)
-    criterion2 = nn.KLDivLoss(size_average=True)
+    criterion2 = nn.KLDivLoss()
     #criterion3 = nn.PoissonNLLLoss(log_input=True, full=False, size_average=True, eps=1e-08)
 
     for iter in range(1, n_iters + 1):
