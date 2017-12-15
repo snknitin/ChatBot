@@ -151,7 +151,7 @@ def train(input_variable, target_variable, encoder, decoder, encoder_optimizer, 
 
 
 def evaluate(encoder, decoder, sentence, max_length=max_seq_len):
-    input_variable = su.variableFromSentence(source,target,sentence)
+    input_variable = su.variableFromSentence(source,sentence)
     input_length = input_variable.size()[0]
     encoder_hidden = encoder.initHidden()
 
