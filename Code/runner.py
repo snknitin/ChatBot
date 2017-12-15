@@ -204,24 +204,22 @@ def evaluateRandomly(encoder, decoder, n=20):
             target.write('\n\n')
         target.close()
 
-def writeresults(encoder, decoder):
-    with open(input_dir + "valid.txt", "r") as doc:
-        lines=doc.read().split('\n')
-        valid_pairs = [[su.textproc(su.normalizeString(s)) for s in l.strip('\r\n').split('\t')] for l in lines]
-        with open(input_dir + "valpred.txt", "w") as target:
-            for i in range(len(valid_pairs)):
-                qapair = valid_pairs[i]
-                target.write('> ' + qapair[0])
-                target.write('\n')
-                target.write('= ' + qapair[1])
-                target.write('\n')
-                output_words, attentions = evaluate(encoder, decoder, qapair[0])
-                output_sentence = ' '.join(output_words)
-                target.write('< ' + output_sentence)
-                target.write('\n')
-                target.write('\n\n')
-            target.close()
-        doc.close()
+def writeresults(encoder, decoder,filepath):
+    valid_pairs=su.loadpickle(filepath)
+    with open(input_dir + "valpred.txt", "w") as target:
+        for i in range(len(valid_pairs)):
+            qapair = valid_pairs[i]
+            target.write('> ' + qapair[0])
+            target.write('\n')
+            target.write('= ' + qapair[1])
+            target.write('\n')
+            output_words, attentions = evaluate(encoder, decoder, qapair[0])
+            output_sentence = ' '.join(output_words)
+            target.write('< ' + output_sentence)
+            target.write('\n')
+            target.write('\n\n')
+        target.close()
+
 
 
 
@@ -235,6 +233,8 @@ if __name__ == '__main__':
     source_path = input_dir + "train_source.pickle"
     target_path = input_dir + "train_target.pickle"
     pairs_path = input_dir + "train_pairs.pickle"
+    val_pairs_path = input_dir + "val_pairs.pickle"
+
     hidden_size = 256
 
     n_iters = 100
@@ -262,4 +262,4 @@ if __name__ == '__main__':
     #trainIters(encoder, decoder, n_iters, save_every=save_every, print_every=print_every, plot_every=plot_every, learning_rate=learning_rate)
 
     #evaluateRandomly(encoder, decoder)
-    writeresults(encoder, decoder)
+    writeresults(encoder, decoder,val_pairs_path)
