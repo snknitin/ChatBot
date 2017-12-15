@@ -51,12 +51,7 @@ def textproc(s):
     s=s.strip()
     return s
 
-######################################################################
-# To read the data file we will split the file into lines, and then split
-# lines into pairs. The files are all English → Other Language, so if we
-# want to translate from Other Language → English I added the ``reverse``
-# flag to reverse the pairs.
-#
+
 
 def readLangs(filename):
     print("Reading lines...")
