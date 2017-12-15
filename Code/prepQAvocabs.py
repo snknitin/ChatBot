@@ -172,15 +172,15 @@ if __name__ == "__main__":
     print("Pickling train resource")
 
     source_file = open(source_path, "wb")
-    pickle.dump(source, source_file)
+    pickle.dump(source, source_file,protocol=2)
     source_file.close()
 
     target_file = open(target_path, "wb")
-    pickle.dump(target, target_file)
+    pickle.dump(target, target_file,protocol=2)
     target_file.close()
 
     pair_file = open(pairs_path, "wb")
-    pickle.dump(pairs, pair_file)
+    pickle.dump(pairs, pair_file,protocol=2)
     pair_file.close()
 
 
@@ -193,15 +193,15 @@ if __name__ == "__main__":
     VAL_source, VAL_target, VAL_pairs = prepareData(valid_file_in)
     print("Pickling valid resource")
     source_file = open(val_source_path, "wb")
-    pickle.dump(VAL_source, source_file)
+    pickle.dump(VAL_source, source_file,protocol=2)
     source_file.close()
 
     target_file = open(val_target_path, "wb")
-    pickle.dump(VAL_target, target_file)
+    pickle.dump(VAL_target, target_file,protocol=2)
     target_file.close()
 
     pair_file = open(val_pairs_path, "wb")
-    pickle.dump(VAL_pairs, pair_file)
+    pickle.dump(VAL_pairs, pair_file,protocol=2)
     pair_file.close()
 
 
