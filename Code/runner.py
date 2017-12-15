@@ -39,7 +39,7 @@ def trainIters(encoder, decoder, n_iters, save_every=5000, print_every=1000, plo
     start = time.time()
     print_time_start = start
     plot_losses = []
-    print_loss_total, print_loss_kl, print_loss_decoder  = 0., 0., 0.  # Reset every print_every
+    print_loss_total = 0. # Reset every print_every
     plot_loss_total = 0  # Reset every plot_every
 
     encoder_optimizer = optim.Adam(encoder.parameters(), lr=learning_rate)
@@ -47,32 +47,32 @@ def trainIters(encoder, decoder, n_iters, save_every=5000, print_every=1000, plo
     training_pairs = [su.variablesFromPair(source,target,random.choice(pairs))
                       for i in range(n_iters)]
     criterion1 = nn.NLLLoss(weight=None, size_average=True)
-    criterion2 = nn.KLDivLoss()
+    #criterion2 = nn.KLDivLoss()
     #criterion3 = nn.PoissonNLLLoss(log_input=True, full=False, size_average=True, eps=1e-08)
 
     for iter in range(1, n_iters + 1):
         training_pair = training_pairs[iter - 1]
         input_variable = training_pair[0]
         target_variable = training_pair[1]
-        kl_anneal_weight = (math.tanh((iter - 3500) / 1000) + 1) / 2
-        total_loss,kl_loss,decoder_loss = train(input_variable, target_variable, encoder,
-                     decoder, encoder_optimizer, decoder_optimizer,kl_anneal_weight, criterion1,criterion2)
+        # kl_anneal_weight = (math.tanh((iter - 3500) / 1000) + 1) / 2
+        total_loss= train(input_variable, target_variable, encoder,
+                     decoder, encoder_optimizer, decoder_optimizer, criterion1)
         print_loss_total += total_loss
-        print_loss_kl += kl_loss
-        print_loss_decoder += decoder_loss
+        # print_loss_kl += kl_loss
+        # print_loss_decoder += decoder_loss
         #print_loss_poisson += poisson_loss
         plot_loss_total += total_loss
 
         if iter % print_every == 0:
             print_loss_total = print_loss_total / print_every
-            print_loss_kl = print_loss_kl / print_every
-            print_loss_decoder = print_loss_decoder / print_every
+            # print_loss_kl = print_loss_kl / print_every
+            # print_loss_decoder = print_loss_decoder / print_every
             #print_loss_poisson = print_loss_poisson / print_every
             print_time = time.time() - print_time_start
             print_time_start = time.time()
-            print('iter %d/%d  step_time:%ds  total_time:%s tol_loss: %.4f kl_loss: %.4f  dec_loss: %.4f ' % (iter, n_iters,print_time,su.timeSince( start, iter / n_iters),print_loss_total,
-                     print_loss_kl,print_loss_decoder))
-            print_loss_total, print_loss_kl, print_loss_decoder = 0, 0, 0
+            print('iter %d/%d  step_time:%ds  total_time:%s tol_loss: %.4f' % (iter, n_iters,print_time,su.timeSince( start,
+                iter / n_iters),print_loss_total ))
+            print_loss_total = 0
         if iter % save_every ==0:
             if not os.path.exists('%sseqad_%s/' % (model_dir, str(iter))):
                 os.makedirs('%sseqad_%s/' % (model_dir, str(iter)))
@@ -88,8 +88,8 @@ def trainIters(encoder, decoder, n_iters, save_every=5000, print_every=1000, plo
     #su.showPlot(plot_losses)
 
 
-def train(input_variable, target_variable, encoder, decoder, encoder_optimizer, decoder_optimizer,kl_anneal_weight,
-          criterion1,criterion2,max_length= max_seq_len):
+def train(input_variable, target_variable, encoder, decoder, encoder_optimizer, decoder_optimizer,
+          criterion1,max_length= max_seq_len):
     encoder_hidden = encoder.initHidden()
 
     encoder_optimizer.zero_grad()
@@ -120,9 +120,9 @@ def train(input_variable, target_variable, encoder, decoder, encoder_optimizer, 
         for di in range(target_length):
             decoder_output, decoder_hidden, decoder_attention = decoder(
                 decoder_input, decoder_hidden, encoder_output, encoder_outputs)
-            decoder_loss = criterion1(decoder_output, target_variable[di])
-            kl_loss = criterion2(decoder_output, target_variable[di])
-            loss = 69*decoder_loss + kl_loss*kl_anneal_weight
+            loss += criterion1(decoder_output, target_variable[di])
+            # kl_loss = criterion2(decoder_output, target_variable[di])
+            # loss = 69*decoder_loss + kl_loss*kl_anneal_weight
             decoder_input = target_variable[di]  # Teacher forcing
 
     else:
@@ -136,9 +136,9 @@ def train(input_variable, target_variable, encoder, decoder, encoder_optimizer, 
             decoder_input = Variable(torch.LongTensor([[ni]]))
             decoder_input = decoder_input.cuda() if use_cuda else decoder_input
 
-            decoder_loss = criterion1(decoder_output, target_variable[di])
-            kl_loss = criterion2(decoder_output, target_variable[di])
-            loss= 69*decoder_loss+kl_loss*kl_anneal_weight
+            loss += criterion1(decoder_output, target_variable[di])
+            # kl_loss = criterion2(decoder_output, target_variable[di])
+            # loss= 69*decoder_loss+kl_loss*kl_anneal_weight
             if ni == EOS_token:
                 break
 
