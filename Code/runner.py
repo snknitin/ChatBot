@@ -223,8 +223,8 @@ if __name__ == '__main__':
     model_dir = input_dir + 'models/'
     if not os.path.exists(model_dir):
         os.makedirs(model_dir)
-    vocab = su.load_dict(input_dir + 'vocab.json')
-    ivocab = {v: k for k, v in vocab.items()}
+    # vocab = su.load_dict(input_dir + 'vocab.json')
+    # ivocab = {v: k for k, v in vocab.items()}
     source_path = input_dir + "train_source.pickle"
     target_path = input_dir + "train_target.pickle"
     pairs_path = input_dir + "train_pairs.pickle"
