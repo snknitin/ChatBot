@@ -8,6 +8,7 @@ import time
 import math
 import numpy as np
 from model import EncoderRNN, AttnDecoderRNN
+from prepQAvocabs import Lang
 import torch
 import torch.nn as nn
 from torch.autograd import Variable
