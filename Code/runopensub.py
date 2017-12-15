@@ -224,7 +224,7 @@ def writeresults(encoder, decoder,filepath):
 
 
 if __name__ == '__main__':
-    input_dir = "/mnt/nfs/scratch1/nsamala/dialogsystems/ChatBot-Text-Summarizer/datasets/Cornell/"
+    input_dir = "/mnt/nfs/scratch1/nsamala/dialogsystems/ChatBot-Text-Summarizer/datasets/Opensubs/"
     model_dir = input_dir + 'models/'
     if not os.path.exists(model_dir):
         os.makedirs(model_dir)
@@ -237,7 +237,7 @@ if __name__ == '__main__':
 
     hidden_size = 256
 
-    n_iters = 40000
+    n_iters = 10000000
     print_every = 100
     save_every = 5000
     plot_every = 100
