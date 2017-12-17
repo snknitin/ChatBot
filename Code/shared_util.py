@@ -13,6 +13,8 @@ import re
 import string
 import json
 import collections
+import matplotlib
+matplotlib.use('GTKAgg')
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 import numpy as np
@@ -281,6 +283,8 @@ def showPlot(points):
     loc = ticker.MultipleLocator(base=0.2)
     ax.yaxis.set_major_locator(loc)
     plt.plot(points)
+    fig.savefig('./plot.png',bbox_inches='tight')
+    plt.close(fig)
 
 ######################################################################
 # Visualizing Attention
@@ -323,6 +327,8 @@ def showAttention(input_sentence, output_words, attentions):
     ax.yaxis.set_major_locator(ticker.MultipleLocator(1))
 
     plt.show()
+    fig.savefig('./attention.png',bbox_inches='tight')
+    plt.close(fig)
 
 
 
