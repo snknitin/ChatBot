@@ -283,7 +283,7 @@ def showPlot(points):
     loc = ticker.MultipleLocator(base=0.2)
     ax.yaxis.set_major_locator(loc)
     plt.plot(points)
-    fig.savefig('./plot.png',bbox_inches='tight')
+    fig.savefig('./plot.png')
     plt.close(fig)
 
 ######################################################################
@@ -327,7 +327,7 @@ def showAttention(input_sentence, output_words, attentions):
     ax.yaxis.set_major_locator(ticker.MultipleLocator(1))
 
     plt.show()
-    fig.savefig('./attention.png',bbox_inches='tight')
+    fig.savefig('./attention.png')
     plt.close(fig)
 
 
