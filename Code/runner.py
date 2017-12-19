@@ -220,7 +220,11 @@ def writeresults(encoder, decoder,filepath):
             target.write('\n\n')
         target.close()
 
-
+def plotattention(encoder, decoder,filepath):
+    valid_pairs=su.loadpickle(filepath)
+    qapair = valid_pairs[59]
+    output_words, attentions = evaluate(encoder, decoder, qapair[0])
+    su.showAttention(qapair[0], output_words, attentions)
 
 
 if __name__ == '__main__':
@@ -237,12 +241,12 @@ if __name__ == '__main__':
 
     hidden_size = 256
 
-    n_iters = 40000
+    n_iters = 100
     print_every = 100
     save_every = 5000
     plot_every = 100
     learning_rate=0.001
-    reload_from = -1
+    reload_from = 100000
 
     source=su.loadpickle(source_path)
     target=su.loadpickle(target_path)
@@ -259,7 +263,8 @@ if __name__ == '__main__':
         decoder = decoder.cuda()
 
     print("Training")
-    trainIters(encoder, decoder, n_iters, save_every=save_every, print_every=print_every, plot_every=plot_every, learning_rate=learning_rate)
+    #trainIters(encoder, decoder, n_iters, save_every=save_every, print_every=print_every, plot_every=plot_every, learning_rate=learning_rate)
 
-    evaluateRandomly(encoder, decoder)
-    writeresults(encoder, decoder,val_pairs_path)
+    #evaluateRandomly(encoder, decoder)
+    #writeresults(encoder, decoder,val_pairs_path)
+    plotattention(encoder,decoder,val_pairs_path)
